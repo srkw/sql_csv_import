@@ -9,6 +9,7 @@ services:
       - ./db/mysql_init:/docker-entrypoint-initdb.d
       - ./db/mysql_conf/:/etc/mysql/conf.d
       - ./queries/import.sql:/import-query.sql
+      - ./sample_users.csv:/sample_users.csv
     environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_USER: test

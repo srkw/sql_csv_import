@@ -1,9 +1,8 @@
-LOAD DATA LOCAL INFILE 'sample-users.csv'
+LOAD DATA LOCAL INFILE 'sample_users.csv'
 INTO TABLE users
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ','
-OPTIONALLY ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
+LINES TERMINATED BY '\r\n'
 (
 @1,
 id,
@@ -15,4 +14,3 @@ id = id,
 name = nullif(name, ''),
 email = nullif(email, '')
 ;
-
